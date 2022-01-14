@@ -1,8 +1,4 @@
-// import MovieList from "./components/MovieList";
-// import ListForm from "./components/ListForm";
-// import Title from "./components/Title";
-// import MovieForm from "./components/MovieForm/MovieForm.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Forms from "./pages/Forms.js";
 import Test from "./pages/Test.js";
@@ -12,6 +8,23 @@ import NotFound from "./pages/NotFound.js";
 function App() {
   return (
     <Router>
+      <nav>
+        <ul className='flex'>
+          <li className='ml-2'>
+            <Link to='/'>Home</Link>
+          </li>
+          <li className='ml-2'>
+            <Link to='/forms'>Forms</Link>
+          </li>
+          <li className='ml-2'>
+            <Link to='/lists'>Lists</Link>
+          </li>
+          <li className='ml-2'>
+            <Link to='/test'>Test</Link>
+          </li>
+        </ul>
+      </nav>
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/lists' element={<Lists />} />
@@ -19,6 +32,9 @@ function App() {
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <footer>
+        <p>this is my footer</p>
+      </footer>
     </Router>
   );
 }
