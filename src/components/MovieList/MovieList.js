@@ -1,5 +1,6 @@
 import React from "react";
 import Movie from "../Movie";
+import { movies } from "../../data/data.js";
 
 const MovieList = () => {
   return (
@@ -12,10 +13,9 @@ const MovieList = () => {
           come to the aid
         </h2>
       </div>
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
+      {movies.map((movie) => {
+        return <Movie {...movie} />;
+      })}
       <div>
         <p className='my-3 ml-3 text-2xl italic text-white max-width-fit'>
           "This is the time for all good men to come to the aid of the party."
