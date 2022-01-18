@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar.js";
 import Home from "./pages/Home.js";
@@ -10,9 +11,19 @@ import Lists from "./pages/Lists.js";
 import NotFound from "./pages/NotFound.js";
 
 function App() {
+  const [userLoggedIn, setUserLoggedIn] = useState(true);
+
+  const logout = () => {
+    setUserLoggedIn(false);
+  };
+
+  const login = () => {
+    setUserLoggedIn(true);
+  };
+
   return (
     <Router>
-      <NavBar />
+      <NavBar userLoggedIn={userLoggedIn} logout={logout} login={login} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

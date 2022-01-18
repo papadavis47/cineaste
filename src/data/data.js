@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 export const movies = [
   {
     id: 1,
@@ -35,19 +36,19 @@ export const movies = [
 
 export const lists = [
   {
-    id: 1,
+    id: uuidv4(),
     title: "My Faves",
     description: "A list of my favorite films",
     notes: "This is the ultimate list of cool films",
   },
   {
-    id: 2,
+    id: uuidv4(),
     title: "DVDS I Own",
     description: "These DVD have been purchased over the years since 2003",
     notes: "I am saving these for Nicaragua or the Airstream.",
   },
   {
-    id: 3,
+    id: uuidv4(),
     title: "My Blu-Rays",
     description: "A list of Blu-Ray special films",
     notes: "These are the blu-rays I have invested in since 2009 or so",

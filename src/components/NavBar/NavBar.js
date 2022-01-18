@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/cinema_icon.png";
 
-const NavBar = () => {
+const NavBar = ({ userLoggedIn, logout, login }) => {
   return (
     <div className='flex items-center justify-between px-4 py-2 text-blue-100 bg-blue-900'>
       <Link to='/' className='inline'>
@@ -22,15 +22,29 @@ const NavBar = () => {
           <li className='px-3 mr-2'>
             <Link to='/about'>About</Link>
           </li>
-          <li className='px-3 ml-2'>
-            <Link to='/signup'>Sign Up</Link>
-          </li>
-          <li className='px-3 ml-2'>
-            <Link to='/login'>Login</Link>
-          </li>
-          <li className='px-3 ml-2'>
-            <Link to='/profile'>Profile</Link>
-          </li>
+          {!userLoggedIn && (
+            <li className='px-3 ml-2'>
+              <Link to='/signup'>Sign Up</Link>
+            </li>
+          )}
+          {!userLoggedIn ? (
+            <li className='px-3 ml-2'>
+              <Link to='/login' onClick={login}>
+                Login
+              </Link>
+            </li>
+          ) : (
+            <li className='px-3 ml-2'>
+              <Link to='/' onClick={logout}>
+                Log Out
+              </Link>
+            </li>
+          )}
+          {userLoggedIn && (
+            <li className='px-3 ml-2'>
+              <Link to='/profile'>Profile</Link>
+            </li>
+          )}
         </ul>
       </nav>
     </div>

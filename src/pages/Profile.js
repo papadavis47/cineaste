@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div className='flex flex-col items-center'>
       {lists.map((list) => {
-        return <MovieList {...list} />;
+        return <MovieList key={list.id} {...list} />;
       })}
     </div>
   );

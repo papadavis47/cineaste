@@ -1,17 +1,7 @@
 import React from "react";
 
-// const movie = [
-//   {
-//     name: "Platoon",
-//     director: "Oliver Stone",
-//     genre: "Drama",
-//     memories: "Seeing it for the first time with my Dad in '87 before Mom died",
-//     decadeCreated: "1980s",
-//   },
-// ];
-
-const Movie = (props) => {
-  const { name, director, genre, decadeCreated, memories, id } = props;
+const Movie = (movies) => {
+  const { name, director, genre, decadeCreated, memories, id } = movies;
   return (
     <div
       key={id}

@@ -12,7 +12,7 @@ const MovieList = (props) => {
         <h2 className='mb-3 ml-3 text-2xl italic max-width-fit'>{description}</h2>
       </div>
       {movies.map((movie) => {
-        return <Movie {...movie} />;
+        return <Movie key={movie.id} {...movie} />;
       })}
       <div>
         <p className='my-3 ml-3 text-2xl italic text-white max-width-fit'>"{notes}"</p>
