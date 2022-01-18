@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const MovieForm = () => {
   return (
-    <div className='w-1/2 p-8 mb-4 text-white bg-blue-500 border-2 rounded-md'>
+    <div className='w-1/2 p-8 my-4 text-white bg-blue-500 border-2 rounded-md'>
       <h3 className='text-3xl font-bold text-center'>Add Film</h3>
       <form>
         <div className='flex flex-col mb-5'>
@@ -59,16 +59,7 @@ const MovieForm = () => {
             id='memories'
             className='px-1 py-1 border text-grey-darkest'
             rows='5'
-          />
-        </div>
-        <div className='flex flex-col mb-5'>
-          <label htmlFor='notes'>Additional Notes</label>
-          <textarea
-            type='textarea'
-            name='notes'
-            id='notes'
-            className='px-1 py-1 border text-grey-darkest'
-            rows='10'
+            placeholder='Saw this film with my Dad at the old Cinerama in 1989 . . .'
           />
         </div>
         <button type='submit' className='w-full p-3 mt-3 bg-red-500 border-white rounded-md'>

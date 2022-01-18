@@ -4,12 +4,9 @@ import ListForm from "../components/ListForm/ListForm.js";
 
 const Test = () => {
   return (
-    <div>
-      This is a route to put components I am testing
-      <div>
-        <MovieForm />
-        <ListForm />
-      </div>
+    <div className='flex flex-col items-center'>
+      <MovieForm />
+      <ListForm />
     </div>
   );
 };
