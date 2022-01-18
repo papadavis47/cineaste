@@ -5,7 +5,7 @@ import About from "./pages/About.js";
 import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
 import Forms from "./pages/Forms.js";
-import Test from "./pages/Test.js";
+import Profile from "./pages/Profile.js";
 import Lists from "./pages/Lists.js";
 import NotFound from "./pages/NotFound.js";
 
@@ -20,7 +20,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/lists' element={<Lists />} />
         <Route path='/forms' element={<Forms />} />
-        <Route path='/test' element={<Test />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>

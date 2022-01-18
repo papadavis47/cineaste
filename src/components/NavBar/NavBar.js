@@ -9,7 +9,9 @@ const NavBar = () => {
         <div className='flex items-center py-3 hover:text-blue-50'>
           <img src={logo} alt='logo' className='ml-3' />
           <h1 className='py-3 mt-2 ml-4 text-3xl font-bold'>Cineaste</h1>
-          <h2 className='py-3 mt-2 ml-4 text-2xl font-bold'>"For Film Lovers"</h2>
+          <h2 className='py-3 mt-2 ml-4 text-2xl font-bold'>
+            "A List Making Tool For Film Lovers"
+          </h2>
         </div>
       </Link>
       <nav className='text-xl hover:text-blue-50'>
@@ -27,7 +29,7 @@ const NavBar = () => {
             <Link to='/login'>Login</Link>
           </li>
           <li className='px-3 ml-2'>
-            <Link to='/test'>Test</Link>
+            <Link to='/profile'>Profile</Link>
           </li>
         </ul>
       </nav>
