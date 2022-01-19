@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
-export const movies = [
+export const moviesData = [
   {
-    id: 1,
+    id: uuidv4(),
     name: "Platoon",
     director: "Oliver Stone",
     genre: "Drama",
@@ -9,7 +9,7 @@ export const movies = [
     decadeCreated: "1980s",
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: "Days of Heaven",
     director: "Terrence Malick",
     genre: "Drama",
@@ -17,7 +17,7 @@ export const movies = [
     decadeCreated: "1970s",
   },
   {
-    id: 3,
+    id: uuidv4(),
     name: "Lawrence of Arabia",
     director: "David Lean",
     genre: "Drama",
@@ -25,7 +25,7 @@ export const movies = [
     decadeCreated: "1960s",
   },
   {
-    id: 4,
+    id: uuidv4(),
     name: "Apocalypse Now",
     director: "Francis Ford Coppola",
     genre: "Drama",
@@ -34,7 +34,7 @@ export const movies = [
   },
 ];
 
-export const lists = [
+export const listsData = [
   {
     id: uuidv4(),
     title: "My Faves",

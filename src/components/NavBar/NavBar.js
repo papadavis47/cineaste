@@ -9,9 +9,6 @@ const NavBar = ({ userLoggedIn, logout, login }) => {
         <div className='flex items-center py-3 hover:text-blue-50'>
           <img src={logo} alt='logo' className='ml-3' />
           <h1 className='py-3 mt-2 ml-4 text-3xl font-bold'>Cineaste</h1>
-          <h2 className='py-3 mt-2 ml-4 text-2xl font-bold'>
-            "A List Making Tool For Film Lovers"
-          </h2>
         </div>
       </Link>
       <nav className='text-xl hover:text-blue-50'>

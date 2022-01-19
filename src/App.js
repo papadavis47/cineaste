@@ -7,11 +7,12 @@ import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
 import Forms from "./pages/Forms.js";
 import Profile from "./pages/Profile.js";
-import Lists from "./pages/Lists.js";
+import CreateList from "./pages/CreateList.js";
+import CreateListItem from "./pages/CreateListItem.js";
 import NotFound from "./pages/NotFound.js";
 
 function App() {
-  const [userLoggedIn, setUserLoggedIn] = useState(true);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
 
   const logout = () => {
     setUserLoggedIn(false);
@@ -29,7 +30,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/lists' element={<Lists />} />
+        <Route path='/create-list' element={<CreateList />} />
+        <Route path='/create-list-item' element={<CreateListItem />} />
         <Route path='/forms' element={<Forms />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
