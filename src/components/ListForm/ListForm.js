@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const ListForm = () => {
   return (
-    <div className='w-1/2 p-8 mb-4 text-white bg-blue-500 border-2 rounded-md'>
+    <div className='w-1/2 p-8 my-4 text-white bg-blue-500 border-2 rounded-md'>
       <h3 className='text-3xl font-bold text-center'>Create List</h3>
       <form>
         <div className='flex flex-col mb-5'>

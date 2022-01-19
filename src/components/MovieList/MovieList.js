@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import CreateBtn from "../CreateBtn/CreateBtn.js";
 import Movie from "../Movie";
 import { moviesData } from "../../data/data.js";
 
@@ -16,6 +18,11 @@ const MovieList = (props) => {
       })}
       <div>
         <p className='my-3 ml-3 text-2xl italic text-white max-width-fit'>"{notes}"</p>
+      </div>
+      <div className='m-auto '>
+        <Link to='/create-list-item'>
+          <CreateBtn text='Add Film' />
+        </Link>
       </div>
     </div>
   );
